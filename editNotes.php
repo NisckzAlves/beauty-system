@@ -10,7 +10,7 @@
 
 <?php
 include "connection.php";
-
+$ok = false;
 $idNota = isset($_GET["idNota"]) ? $_GET['idNota'] : "";
 
 if (!is_numeric($idNota)) {
@@ -39,14 +39,13 @@ if (isset($_POST["enviar"])) {
 
   $mysql_query = "UPDATE notas SET nome='{$nome}', descricao='{$descricao}',  status='{$status}' WHERE idNota={$idNota}";
   $stmt = $connection->prepare($mysql_query);
-  $stmt->execute();
+  $ok = $stmt->execute();
 }
 // Connection Close	
 ?>
 
 <body>
   <div class="total">
-    <form method="post">
       <div class="subtotal">
         <div class="telinha">
           <h1>ALTERAR NOTA</h1>
@@ -90,8 +89,21 @@ if (isset($_POST["enviar"])) {
             <button class="btn-padrao" value="enviar" name="enviar">Alterar</button>
           </form>
         </div>
-      </div>
-      </script>
+      <?php
+  if ($ok) {
+  ?>
+    <script>
+      // success error warning info question
+      Swal.fire({
+        icon: 'success',
+        title: 'Sucesso!',
+        text: 'Nota alterada com sucesso!',
+      })
+    </script>
+  <?php
+  }
+  ?>
+  </div>
 </body>
 
 </html>

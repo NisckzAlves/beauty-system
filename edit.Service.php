@@ -72,7 +72,7 @@ if (isset($_POST["enviar"])) {
         Swal.fire({
           icon: 'success',
           title: 'Sucesso!',
-          text: 'Cliente alterado com sucesso!',
+          text: 'Serviço alterado com sucesso!',
         })
       </script>
     <?php
