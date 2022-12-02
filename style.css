@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Candlescript';
+  src: url('Candlescript\ Demo\ Version.otf') format('truetype');
+}
+
+* {
+  font-family: 'Noto San', sans-serif;
+  scroll-behavior: auto;
+}
+
+ /* Background total de todas as páginas */
+.total {
+  background-image: url('wave.svg');
+  background-repeat: no-repeat;
+  background-position-y: bottom; 
+  display: flex;
+  width:100vw;
+  min-height: 42.8vw;
+  height:100%;
+  justify-content: center;
+  margin-top: 100px;
+  
+}
+
+ /* Background total da página de login */
+.total-login {
+  background-image: url('wave.svg');
+  background-repeat: no-repeat;
+  background-position-y: bottom; 
+  display: flex;
+  width:100vw;
+  min-height: 48.5vw;
+  height: 100%;
+  justify-content: center;
+  
+}
+
+ /* Engloba a caixa de informações */
+.subtotal {
+  width: 50vw;
+  height: fit-content;
+  min-height: 42.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /* Total da caixa colorida nas páginas */
+.telinha {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #a18ad3;
+  border-radius: 30px 10px 50px 40px;
+  box-shadow: 0px 10px 40px rgba(8, 8, 8, 0.719);
+  text-align: center;
+}
+
+.telinha>h1 {
+  color: #2a1e63;
+  font-weight: 800;
+  margin: 0;
+}
+
+.telinha>h4 {
+  color: rgb(255, 232, 225);
+  font-weight: 800;
+  margin: 0;
+}
+
+.telinha>p{
+  text-align: center;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+ /* Textos e labels em geral */
+.texto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.textoLink {
+  align-items: center;
+}
+
+ /* Config dos radios */
+.radio {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+  font-size: 12pt;
+  justify-content: center;
+}
+
+.radio>input {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.radio>label {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+
+ /* Inputs */
+input[type=radio]:checked {
+  color: #ffffff;
+}
+
+.texto>input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #6b5896;
+  color: rgb(255, 255, 255);
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px rgba(8, 8, 8, 0.719);
+  box-sizing: border-box;
+  /* Não autoriza a div que está dentro ultrapassar a que está por fora. */
+}
+
+.texto>label {
+  color: #2F195F;
+  margin-bottom: 10px;
+}
+
+.texto>input::placeholder {
+  color: rgb(255, 215, 203);
+}
+
+p>a {
+  text-decoration: none;
+  font-weight: bold;
+  color:#2a1e63;
+}
+
+p>a:hover {
+  color:rgb(255, 255, 255);
+  text-shadow:#2F195F;
+  
+}
+
+ /* Opções dentro do acesso de cada Entidade (Ex: botão e pesquisa) */
+.total-opcoes {
+  display: flex;
+  width: 100%;
+  text-align: right;
+  flex-direction: row;
+}
+
+.total-opcoes>input {
+  width: 40%;
+  height: 30%;
+  padding-right: 15px;
+  margin: 2px;
+  border-radius: 30px 20px 30px 20px;
+  border: none;
+  text-align: right;
+  float:left;
+  font-size:18px;
+  margin-left: 20vw;
+}
+
+
+.total-opcoes>input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  color: #2F195F;
+}
+
+ /* Botão */
+.btn-padrao {
+  width: 70%;
+  padding: 16px 0;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgb(203, 206, 214);
+  background: #2F195F;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #2F195F;
+}
+
+.btn-cadastrar {
+  width: fit-content;
+  padding: 16px;
+  margin-right: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgb(203, 206, 214);
+  background: #2F195F;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #2F195F;
+  
+}
+
+.btn-editar {
+  font-size: 15px;
+  width: fit-content;
+  padding: 6px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  background: rgba(47, 25, 95, 0.548);
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #2F195F;
+}
+
+.btn-excluir {
+  font-size: 15px;
+  width: fit-content;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  background: rgba(172, 65, 88, 0.651);
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #2F195F;
+}
+
+ /* Imagens da Home */
+.imagem {
+  text-align: center;
+  display: inline-block;
+}
+
+.imagemLogo {
+  width: 60%;
+  margin-top: 50px;
+}
+
+.imagemCabelo {
+  width: 20%;
+  margin-top: 100px;
+  margin-left: 0px;
+}
+
+ /* Imagens do Perfil */
+.miau {
+  border-radius: 160%;
+  width: 50%;
+  margin: 0 auto;
+  filter: drop-shadow(5px 5px 5px #2f195fa6);
+  border: 5px solid #2f195f4b;
+}
+
+ /* Configuração do Menu de forma TOTAL */
+nav {
+  height: 70px;
+  width: 100%;
+  background: #a18ad3;
+  box-shadow: 0px 10px 40px -12px #2f195fa6;
+  position: fixed;
+  top: 0;
+  float: left;
+}
+
+nav ul li:last-child {
+  float: right;
+}
+
+nav ul {
+  margin-right: 30px;
+}
+
+li {
+  position: relative;
+  float: left;
+  list-style-type: none;
+}
+
+nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  transition: .5s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #2F195F;
+}
+
+ /* Tabelas com as informações do banco */
+table {
+ width: 100%;
+ font-family: 'Noto San', sans-serif;
+}
+
+td {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.534);
+  padding: 5px;
+  text-align: center;
+}
+
+.table-title>td {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #2a1e63;
+}
+
+ /* Configuração do hambuguer (segundo menu dentro do profile) */
+.menuItems li ul {
+  position: absolute;
+  top: 50px;
+  right: -220px;
+  display: none;
+  filter: drop-shadow(5px 5px 5px #2f195fa6);
+}
+
+.menuItems li:hover ul, .menuItems li.over ul{
+  display: block;
+}
+
+.menuItems li ul li{
+  width: 230px;
+  height: 50px;
+  background-color: #ffffffee;
+  border-radius: 8px;
+  border: 2px solid #2b1f4861;
+  display: flex;
+  align-items: center;
+}
+
+.menuItems li ul li:hover {
+  background-color: #2f195f;
+}
+
+.menuItems li ul li:hover a{
+  color:rgb(203, 206, 214);
+}
+  
+.menuItems li ul li a{
+  color:#2a1e63;
+}
+
+
+/* Trabalhando responsividade */
+@media only screen and (max-width: 950px) {
+  .telinha {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .total {
+    flex-direction: column;
+  }
+  .subtotal {
+    width: 100%;
+    height: auto;
+  }
+
+  .esquerda-imagem {
+    width: 50vw;
+  }
+
+  .telinha {
+    width: 90%;
+  }
+}
